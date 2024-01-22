@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Telephasic by HTML5 UP</title>
+		<title>Making a website - Hic sunt dracones</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -34,7 +34,7 @@
 									</li>
 									<li><a href="left-sidebar.html">Left Sidebar</a></li>
 									<li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="cv.html">CV</a></li>
+									<li><a href="2022-08-07%20CV%20Bjarki.pdf">CV</a></li>
 								</ul>
 							</nav>
 
@@ -97,7 +97,27 @@
                                 <h2> Part 3:</h2>
                                 <h1> Git good</h1>
                                 
-                                <p> Working according to the course video instructions, I downloaded the <a href="https://git-scm.com"> Git GUI</a>. </p>
+                                <p> Working according to the course video instructions, I downloaded the <a href="https://git-scm.com"> Git GUI</a>. After setting up a repository on GitHub, and 
+                                    some minor issues with logins, I got the first test commit online.</p>
+                                
+                                <p> The following steps are required in order to get your website up and running.</p>
+                                
+                                <h1>Step 1.</h1>
+                                <p> Create a Git repository on GitHub (mostly an exercise in next -> next -> finish, but remember to make it public.</p>
+                                <h1>Step 2.</h1>
+                                <p> In your working folder, open Git Bash, using the right click menu.</p>
+                                <p> <img src="images/GitStep2.png" alt="" width="400" height="200"> </p>
+                                <h1>Step 3.</h1>
+                                <p> run the following lines in Git Bash:</p>
+                                <p> 'git init'</p>
+                                <p> 'git add .'</p>
+                                <p> 'git commit -m "name your commit"'</p>
+                                <p> 'git branch -M main'</p>
+                                <p> 'git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME</p>
+                                <p> 'git push -u origin main'</p>
+                                <h1>Step 4.</h1>
+                                <p> on GitHub, in your repository, go to "Settings", open GitHub pages, and under "branch", select "main" instead of "none".</p>
+                                
 							</article>
 
 						<div class="row features">
@@ -120,8 +140,7 @@
 								<header>
 									<h3>Project 2 - Under construction</h3>
 								</header>
-								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
-								vel sem sit dolor neque semper magna lorem ipsum.</p>
+								<p>Upcoming project</p>
 								<ul class="actions">
 									<li><a href="#" class="button">Visit</a></li>
 								</ul>
@@ -133,9 +152,7 @@
 								<header>
 									<h3>Project 3 - Under construction</h3>
 								</header>
-								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
-								vel sem sit dolor neque semper magna lorem ipsum.</p>
-								<ul class="actions">
+								<p>Upcoming project</p>
 									<li><a href="#" class="button">Visit</a></li>
 								</ul>
 							</section>
@@ -145,36 +162,6 @@
 
 			<!-- Footer -->
 				<div id="footer-wrapper">
-					<div id="footer" class="container">
-						<header class="major">
-							<h2>Euismod aliquam vehicula lorem</h2>
-							<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel sem sit<br />
-							dolor neque semper magna lorem ipsum feugiat veroeros lorem ipsum dolore.</p>
-						</header>
-						<div class="row">
-							<section class="col-6 col-12-narrower">
-								<form method="post" action="#">
-									<div class="row gtr-50">
-										<div class="col-6 col-12-mobile">
-											<input name="name" placeholder="Name" type="text" />
-										</div>
-										<div class="col-6 col-12-mobile">
-											<input name="email" placeholder="Email" type="text" />
-										</div>
-										<div class="col-12">
-											<textarea name="message" placeholder="Message"></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" /></li>
-												<li><input type="reset" value="Clear form" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-                            </section>
-						</div>
-					</div>
 					<div id="copyright" class="container">
 						<ul class="menu">
 							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
