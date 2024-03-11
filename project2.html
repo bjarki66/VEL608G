@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 2 - Leg part of tripod</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="project2.html">Project 2 - Tripod</a></h1>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li>
+										<a href="#">Projects</a>
+										<ul>
+											<li><a href="index.html">Project 1 - Website</a></li>
+											<li><a href="project2.html">Project 2 - Press-fit tripod</a></li>
+											<li><a href="project3.html">Project 3 - 3D printed bracket</a></li>
+										</ul>
+									</li>
+									<li class="break"><a href="https://github.com/bjarki66/VEL608G">GitHub Repository</a></li>
+									
+									<li><a href="2022-08-07%20CV%20Bjarki.pdf">CV</a></li>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper">
+					<div class="container" id="main">
+
+						<!-- Content -->
+							<article id="content">
+								<header>
+									<h2>Project 2:</h2>
+									<p>Laser cut leg assembly for a tripod.</p>
+								</header>
+                                <h2>Introduction:</h2>
+                                <p>For projects 2 and 3, I decided to make two seperate components of a single assembly, that being an adjustable tripod
+                                for a mobile phone. The mount, which is designed to be a camera mount, is made up of a laser cut leg assembly, and a 3D printed
+                                bracket for holding the phone.</p>
+                                <p>Project 2 will mostly focus on the leg assembly, although the 3D printed bracket features as a structural element, and will be 
+                                referenced when applicable.</p>
+                                <p></p>
+                                <h2>Step 1: Design parameters:</h2>
+								<p>Given the available materials, the design was made with 4mm plywood in mind, with all dimensions being derived from the thickness of the material. The total 
+                                height of the leg assembly is 100mm in that case, although, for structural reasons, the optimal thickness would likely be closer to 6mm, with the final height being
+                                around 160mm.</p>
+                                <p>Since the design is parameterized based on material thickness, all relevant calculations will be done as functions of "t", with results being based on t = 4.</p>
+                                
+                                <p>For simplicity's sake, being a tripod, the design is radially symmetrical, with the leg geometry, as well as total geometry based on trigonometry. That means 
+                                each leg of the tripod will be relative to a triangle of base with (B) = 15t, and base height (H) = 25t. Below are shown the most relevant parameters, although other dimensions
+                                will be based on thickness, and will be referrenced when applicable.</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step02b_design_parameters.jpg" style="width: 60%;max-height: 60%"></p>
+                                
+                                
+                                
+								<h2>Step 2: Leg geometry</h2>
+                                
+                                <p>As previously stated, the geometry of the legs are based on a triangle with a base width (B) of 15t and base height (H) of 25t. At the bottom of each leg is a cut-out for a circular
+                                base, and at the top a notch where the bracket for the phone snaps on, providing additional structural support for the leg assembly, as well as stability for the phone itself.</p>
+                                
+                                <p>The size of the bracket determines the location of the centre line for the whole assembly, from which the radial symmetry of the legs is derrived. The location
+                                of the centre line was derrived from:</p>
+                                <p>Bracket with = 6t<br>
+                                Centre line = Bracket with/2 + B = 18t</p>
+                                
+                                <p>To provide stability on rough surfaces, each leg will have a circular base underneath it, which requires a bit of added material (2.5t in height from the base)
+                                for structural soundness. Below is the initial drawing for each leg of the assembly.</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step03_pod_sketch.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <h2> Step 3: Radial symmetry</h2>
+                                
+                                <p>The inital leg drawing was extruded to thickness t, and then Fusion's built-in radial symmetry feature was used to place the remaining 2 legs, based on the 
+                                    location of the centre line</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step05_tripod_set_up.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <h2>Step 4: Axial stabilizer</h2>
+                                
+                                <p>The legs, being fairly thin, and with only one point of contact at the top, require both additional torsional strength, as well as a second point of contact to be made stable.
+                                The solution to that problem was determined to be a circular "axial stabilizer", which is press-fitted to the legs, and provides support, both downwards, as well as keeping 
+                                pressure off the snap points at the top of the assembly. The axial stabilizer is located at 2/3 of the total height of the leg assembly.</p>
+                                
+                                
+                                <p>The dimensions of the axial stabilizer were calculated as follows:</p>
+                                
+                                <p>
+                                    
+                                    tan(theta) = B/H = 0.6 <br>
+                                    total length to centre line = 0.6*2.5t + B + Bracket_width/2 = 19.5t <br>
+                                    total height = 1/0.6 * 19.5t = 32.5t <br>
+                                    outer radius = 0.6 * total height * 2/3 = 13t <br>
+                                    inner radius = outer radius - width of leg/2 (4t/2) = 11t
+                                
+                                </p>
+                                
+                                <p>A hexagonal shape was then cut into the stabilizer, for weight saving, and aesthetic reasons. The hexagonal shape was chosen due to it being a very stable shape, and for the
+                                    fact it fits perfectly with the triangular shape of the tripod's structure, as well as being easy to cut, compared to more complicated skeletonizing structures. </p>
+                                
+                                <p><img class="scale down" src="images/project2/Step06_axial_stabilizer_bestagon.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <p>The stabilizer's dimensions were locked in using the calculations for innner- and outer radii, and the stabilizer then moved into place. The cuts on the inital legs was
+                                achieved using Fusion's built in function "Combine".</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step07_Tripod_stabilized.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <h2>Step 4: Feet</h2>
+                                
+                                <p>As stated above the design required base plates for each leg, for use on uneaven ground, the design is simply based on the earlier drawing for the legs, with each
+                                plate being the same diameter as the center bracket.</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step08_Tarantino.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <p>The base plates were then moved into shape, resulting in the final design of the tripod assembly</p>
+                                
+                                <p><img class="scale down" src="images/project2/tripod_final.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <h2>Step 5: Preparation for cutting</h2>
+                                
+                                <p><img class="scale down" src="images/project2/Step081_Component_copy.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <p>To prepare for laser cutting, all relevant bodies of the model were moved to a new component named "CAD Layout". The bodies were then changed to 
+                                    individual components, and roughly arrange using the Fusion built-in command "Align". The cutting surface was based on the maximum cutting surface of the laser cutter (1000mm*500mm), and the components were arranged within that area using the built-in "Arrange" function.</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step083_Arrangement.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+							</article>
+
+						<div class="row features">
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper first">
+									<a href="index.html" class="image featured"><img src="images/website.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h3>Project 1 - Website</h3>
+								</header>
+								<p>On creating this website.</p>
+								<ul class="actions">
+									<li><a href="index.html" class="button">Visit</a></li>
+								</ul>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/construction_site.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h3>Project 2 - Press-fit tripod</h3>
+								</header>
+								<p>Leg part of tripod</p>
+								<ul class="actions">
+									<li><a href="#" class="button">You are here!</a></li>
+								</ul>
+							</section>
+							<section class="col-4 col-12-narrower feature">
+								<div class="image-wrapper">
+									<a href="project3.html" class="image featured"><img src="images/construction_site.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h3>Project 3 - 3D printed bracket</h3>
+								</header>
+								<p>Phone mount part of tripod</p>
+									<li><a href="project3.html" class="button">Visit</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div id="copyright" class="container">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
