@@ -143,6 +143,24 @@
                                 
                                 <p><img class="scale down" src="images/project2/Step083_Arrangement.jpg" style="width: 40%;max-height: 40%"></p>
                                 
+                                <p>The model is then moved into the "Manufacture" workspace, and tool paths set up. Using the "setup" feature, the components are located on the cutting stock, with 
+                                the geometry of the stock being set up as relative to the component layout from earlier, but offset on the X- and Y-axies by 10mm, to account for imperfections at the
+                                edges of the material.</p>
+                                
+                                <p>The final geometry of the stock is calculated to be approximately 124mm x 283mm, assuming a thickness of 4mm, although the size may vary based on the measured 
+                                    thickness of the stock at manufacture.</p>
+                                
+                                <p>Due to linking constraints, a slight adjustment was required. The program could not find a tool path where one of the legs was cut from inside the hexagonal
+                                cutout for the stabilizer, resulting in slight material wastage. Once the error had been fixed, a tool path could be set up.</p>
+                                
+                                <p><img class="scale down" src="images/project2/Step084b_Face_selection.jpg" style="width: 40%;max-height: 40%"></p>
+                                
+                                <h2>Step 6: Kerf compensation</h2>
+                                
+                                <p>To ensure proper fitting of the press fit components, kerf must be accounted for. That requires offsetting the tool paths by the width of the laser, so that
+                                    the original dimensions of the design are conserved. The laser cutting feature in Fusion automatically accounts for kerf, assuming the correct kerf width for 
+                                    the laser cutter is provided.</p>
+                                
                                 
                                 
                                 
@@ -168,7 +186,7 @@
 							</section>
 							<section class="col-4 col-12-narrower feature">
 								<div class="image-wrapper">
-									<a href="#" class="image featured"><img src="images/construction_site.jpg" alt="" /></a>
+									<a href="#" class="image featured"><img src="images/project2/tripod_final.jpg" alt="" /></a>
 								</div>
 								<header>
 									<h3>Project 2 - Press-fit tripod</h3>
@@ -180,7 +198,7 @@
 							</section>
 							<section class="col-4 col-12-narrower feature">
 								<div class="image-wrapper">
-									<a href="project3.html" class="image featured"><img src="images/construction_site.jpg" alt="" /></a>
+									<a href="project3.html" class="image featured"><img src="images/project3/Step16_Bracket_finalized.jpg" alt="" /></a>
 								</div>
 								<header>
 									<h3>Project 3 - 3D printed bracket</h3>
